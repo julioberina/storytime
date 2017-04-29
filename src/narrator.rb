@@ -6,6 +6,8 @@ class Narrator
   end
 
   def button_up id
+    if id == Gosu::KbEscape
+    end
   end
 
   def button_down id
