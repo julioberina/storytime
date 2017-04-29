@@ -20,7 +20,11 @@ class Book < Gosu::Window
   end
 
   def button_up id
-    @narrator.button_up id
+    if id == Gosu::KbEscape
+      self.fullscreen = self.fullscreen? ? false : true
+    else
+      @narrator.button_up id
+    end
   end
 
   def button_down id
